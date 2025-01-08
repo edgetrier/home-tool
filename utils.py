@@ -5,6 +5,7 @@ author:Clifford
 
 import sqlite3
 import streamlit as st
+import os
 
 def load_db():
     """
@@ -21,6 +22,28 @@ def load_db():
 
 def page_init():
     """
-    Initalisation function when loading each page
+    Initalisation function when loading each pages
     """
-    load_db()
+    st.set_page_config(
+        page_title="EdgeTrier Home Tool",
+        initial_sidebar_state="collapsed",
+        layout="wide",
+        menu_items={
+            "About": """
+                    ### EdgeTrier Home Tool
+
+                    **Version 0.1**
+
+                    Author: Clifford Zhang
+
+                    Website: [https://edgetrier.one](edgetrier.one)
+
+                    Github Repo: [https://github.com/edgetrier/home-tool](github.com/edgetrier/home-tool)
+                    """
+        }
+    )
+
+    load_db() # Load Database
+
+
+    

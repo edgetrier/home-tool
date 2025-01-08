@@ -1,1 +1,1 @@
-streamlit run ./launcher.py
+streamlit run ./EdgeTrier-Home-Tool.py
